@@ -142,7 +142,94 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">W10 << <a href='W10.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam<br /><h1>W11</h1>
-<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WdreVTL-Wx8?si=5TOuYP_s83lZ0GOI" title="YouTube video player" width="560"></iframe></p><br />W10 << <a href='W10.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam</div>
+<p>def print_circle():<br/> radius = 4 # 圓的半徑<br/> center_x, center_y = 5, 5 # 圓心座標</p>
+<p>for y in range(10):<br/> for x in range(10):<br/> # 計算該點到圓心的距離<br/> distance = (x - center_x) ** 2 + (y - center_y) ** 2<br/> # 判斷該點是否在圓內，若在圓內或圓邊界，列印星號<br/> if distance &lt;= radius ** 2:<br/> print('*', end='')<br/> else:<br/> print(' ', end='')<br/> print() # 換行</p>
+<p># 呼叫函式列印圓形<br/>print_circle()</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def print_circle():
+    radius = 4  # 圓的半徑
+    center_x, center_y = 5, 5  # 圓心座標
+
+    for y in range(10):
+        for x in range(10):
+            # 計算該點到圓心的距離
+            distance = (x - center_x) ** 2 + (y - center_y) ** 2
+            # 判斷該點是否在圓內，若在圓內或圓邊界，列印星號
+            if distance &lt;= radius ** 2:
+                print('*', end='')
+            else:
+                print(' ', end='')
+        print()  # 換行
+
+# 呼叫函式列印圓形
+print_circle()
+</pre>
+<p><iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" frameborder="0" height="315" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/WdreVTL-Wx8?si=5TOuYP_s83lZ0GOI" title="YouTube video player" width="560"></iframe></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">n = 11  # 總共的行數
+space = '_'
+center = n//2
+#print(center)
+
+for y in range(n):
+    for x in range(n):
+        print("(", x, ", ", y, ")", sep="")
+</pre>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width = 400, height = 400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 20
+
+#gs*tc = canvas width and height
+
+ctx = canvas.getContext("2d")
+width = 11
+height = 11
+
+
+for i in range(width):
+     for j in range(height):
+        #dRect(i*gs, j*gs, gs, gs, 1, "lightgrey")
+         ctx.lineWidth = 1
+         ctx.strokeStyle = 'red'
+         ctx.beginPath();
+         ctx.rect(i*gs,j*gs,gs,gs)
+         ctx.stroke();
+
+from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width = 400, height = 400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 20
+
+#gs*tc = canvas width and height
+
+ctx = canvas.getContext("2d")
+width = 11
+height = 11
+
+
+for i in range(width):
+     for j in range(height):
+        #dRect(i*gs, j*gs, gs, gs, 1, "lightgrey")
+         ctx.lineWidth = 1
+         ctx.strokeStyle = 'red'
+         ctx.beginPath();
+         ctx.rect(i*gs,j*gs,gs,gs)
+         ctx.stroke();
+
+</pre>
+<p><br/><br/></p>
+<br />W10 << <a href='W10.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam</div>
         
     <!-- footer -->
       <div class="container">

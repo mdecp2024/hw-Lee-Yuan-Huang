@@ -67,7 +67,7 @@
 <p><yt-attributed-string class="style-scope ytd-text-inline-expander" user-input=""><span class="yt-core-attributed-string yt-core-attributed-string--white-space-pre-wrap" dir="auto" role="text"><span class="yt-core-attributed-string--link-inherit-color" dir="auto">製作過程讓我了解AI的強大，用不同的程式回答我的許多疑問</span></span></yt-attributed-string></p>
 <div class="style-scope ytd-text-inline-expander" id="snippet"></div>
 <div class="style-scope ytd-watch-metadata" slot="extra-content"></div>
-<h2>W11_hw</h2>
+<h2>w11_hw</h2>
 <p>def print_circle():<br/> radius = 4 # 圓的半徑<br/> center_x, center_y = 5, 5 # 圓心座標</p>
 <p>for y in range(10):<br/> for x in range(10):<br/> # 計算該點到圓心的距離<br/> distance = (x - center_x) ** 2 + (y - center_y) ** 2<br/> # 判斷該點是否在圓內，若在圓內或圓邊界，列印星號<br/> if distance &lt;= radius ** 2:<br/> print('*', end='')<br/> else:<br/> print(' ', end='')<br/> print() # 換行</p>
 <p># 呼叫函式列印圓形<br/>print_circle()</p>
@@ -155,7 +155,43 @@ for i in range(width):
 
 </pre>
 <p><br/><br/></p>
-<h2>HW 1 Exam</h2>
+<h2>w13</h2>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
+from browser import document as doc
+
+# 利用 html 建立 canvas 超文件物件
+canvas = html.CANVAS(width = 400,height = 400)
+brython_div = doc["brython_div1"]
+brython_div &lt;= canvas
+
+# 每一格的 pixel 數
+gs = 200
+
+# gs*tc = canvas width and height
+
+ctx = canvas.getContext("2d")
+
+width=1
+height=1
+
+for i in range(width): 
+    for j in range(height):
+     #dRect(i*gs, j*gs, gs, gs, 1, "lightgrey")
+     ctx.lineWidth=1
+     ctx.strokeStyle='red'
+     ctx.beginPath();
+     ctx.rect(i*gs,j*gs,gs,gs)
+     ctx.stroke();
+     
+for i in range(width): 
+    for j in range(height):
+     #dRect(i*gs, j*gs, gs, gs, 1, "lightgrey")
+     ctx.lineWidth=1
+     ctx.strokeStyle='red'
+     ctx.beginPath();
+     ctx.rect(i*gs+50,j*gs+50,gs,gs)
+     ctx.stroke();</pre>
+<p></p><h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h1>HW 2</h1>

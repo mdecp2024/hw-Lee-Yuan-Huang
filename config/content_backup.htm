@@ -154,8 +154,65 @@ for i in range(width):
          ctx.stroke();
 
 </pre>
-<p><br/><br/></p>
-<h2>w13</h2>
+<p></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import document, window
+from urllib.parse import urlparse, parse_qs
+
+# 當前頁面的 URL
+current_url = window.location.href
+
+# 解析 URL，提取 page_title 參數
+parsed_url = urlparse(current_url)
+query_params = parse_qs(parsed_url.query)
+page_title = query_params.get("page_title", ["w10"])[0]  # 默認為 'w10'，如果沒有該參數
+
+#print(page_title)
+
+url = "https://mde.tw/list/1b.txt"
+data = open(url).read()
+line_data = data.split("\n")[1:]
+
+div = document.getElementById("brython_div1")
+
+for line in line_data[:-1]:
+    stud_data = line.split("\t")
+    stud_num = stud_data[1]
+    github = stud_data[2]
+    page_url = f"https://mdecp2024.github.io/hw-{github}/content/{page_title}.html"
+    main_url = f"https://mdecp2024.github.io/hw-{github}/content/index.html"
+
+    try:
+        # 嘗試獲取 page_title.html 頁面
+        page_response = open(page_url).read()
+        if page_response != "":
+            # 如果頁面存在，則顯示學號連結
+            a = document.createElement("a")
+            a.href = page_url
+            a.text = stud_num + ", " + page_title
+            a.style.marginRight = "10px"  # 調整間距
+            
+    except Exception as e:
+        # 處理例外情況
+        # 沒有目標頁面, 則顯示其主頁
+        a = document.createElement("a")
+        a.href = main_url
+        a.text = stud_num
+        a.style.marginRight = "10px"  # 調整間距
+
+    # 創建一個新的 div 來包裝連結
+    link_div = document.createElement("div")
+    link_div.appendChild(a)
+    div.appendChild(link_div)  # 將新的 div 添加到主 div 中</pre>
+<p><br/><br/><br/></p>
+<h2>w12_hw</h2>
+<p><span> 請各組組員分別利用 </span><span>Brython 以及 Jupyter lab</span><span> 環境, 執行</span><a href="http://229.cycu.org/python_2025_lite.7z">可攜程式</a><span> notebook 目錄中的 </span><span>01_string_input_print.ipynb 至 10_for_search.ipynb</span><span> 筆記本程式, 完成後請將能在 Brython 執行的程式碼存入個人 </span><span>Gist</span><span> 後, 將各程式執行連結放入 w12_hw 網頁上. 最後請說明各範例中所使用的程式語法以及執行心得.</span></p>
+<p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/55818e038b5a51fe96dcf97f51439196bbcb0a7e/hw_Q1">01_string_input_print.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q2.py">02_variables.ipynb</a> </p>
+<p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q3.py">03_list_if_in_else.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q4.py">04_list_append_remove.ipynb</a></p>
+<p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q5.py">05_list_index_pop_insert.ipynb </a><span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q6.py">06_list_slicing.ipynb</a> </p>
+<p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q7.py">07_list_slicing_use.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q8.py">08_for_range.ipynb</a></p>
+<p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q9.py">09_for_loop_if_equals.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q10.py">10_for_search.ipynb</a></p>
+<p>語法:Python</p>
+<p>心得:</p><h2>w13_hw</h2>
 <p>一個格子</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
@@ -339,7 +396,72 @@ context_menu.children[0].bind("click", clear_canvas)  # First button: Clear canv
 
 context_menu.children[1].bind("click", draw_circle)  # Second button: Draw a circle
  </pre>
-<p><br/><br/></p><h2>HW 1 Exam</h2>
+<p></p>
+<h2>w15</h2>
+<p>題目一: 從 1 累加到 100"作為 anchor 的連結標題</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))</pre>
+<p>1.當你寫 sum(range(1, 101)) 時，這其實是兩個東西在一起發揮作用。</p>
+<p>2.range(1, 101)：</p>
+<p>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 range(1, 101) 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
+<p>3.sum()：</p>
+<p>接下來，sum() 是讓電腦將這些數字加起來。也就是說，sum(range(1, 101)) 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
+<p>4.總和=2100×(1+100)=2100×101=5050</p>
+<p>題目二: 以"addto"作為連結標題</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto): # 使用公式計算總和 sum_upto = upto * (upto + 1) // 2 sum_init_minus_1 = (init - 1) * init // 2 return sum_upto - sum_init_minus_1 # 主程式 init = 1 upto = 100 # 呼叫 addto 函式 result = addto(init, upto) print(f"從{init}累加到{upto}={result}")</pre>
+<p>題目三: add_only_even 作為連結標題.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 計算從 init 到 upto 之間所有偶數的和
+    # 找到範圍內的第一個偶數
+    if init % 2 != 0:
+        init += 1  # 若起始數字為奇數，則跳過此數字，從下一個偶數開始
+     
+    # 找到範圍內的最後一個偶數
+    if upto % 2 != 0:
+        upto -= 1  # 若終止數字為奇數，則調整為上一個偶數
+     
+    # 偶數總和公式：等差數列求和
+    n = (upto - init) // 2 + 1  # 計算偶數的個數
+    sum_even = n * (init + upto) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+     
+    return sum_even
+ 
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}的偶數和={result}")</pre>
+<p>題目四: 以 add_avoid_8 作為連結標題.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 找到範圍內的第一個尾數為 8 的數字
+    if init % 10 &lt;= 8:
+        start = init + (8 - init % 10)
+    else:
+        start = init + (18 - init % 10)
+     
+    # 找到範圍內的最後一個尾數為 8 的數字
+    if upto % 10 &gt;= 8:
+        end = upto - (upto % 10 - 8)
+    else:
+        end = upto - (upto % 10 + 2)
+     
+    # 如果 start &gt; end，則沒有符合條件的數字
+    if start &gt; end:
+        return 0
+     
+    # 計算這些數字的總和
+    n = (end - start) // 10 + 1  # 這些數字的個數
+    total_sum = n * (start + end) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+     
+    return total_sum
+ 
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
+<p></p><h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h1>HW 2</h1>

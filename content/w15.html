@@ -141,10 +141,71 @@ img.add_border {
           </div>
           
         </header>
-    <div id="tipue_search_content">HW 3 << <a href='HW 3.html'>Previous</a> <a href='HW 3 Exam.html'>Next</a> >> HW 3 Exam<br /><h1>w7</h1>
-<p>n = 5 # 總共的行數<br/> <br/>for i in range(n): # 對於每一行</p>
-<p><br/><br/> # 印出空格<br/> print(' ' * (n - i - 1), end='') # 在每行前面印出空格<br/> # 印出星號<br/> print('*' * (2 * i + 1)) # 每行印出 2*i + 1 個星號</p>
-<br />HW 3 << <a href='HW 3.html'>Previous</a> <a href='HW 3 Exam.html'>Next</a> >> HW 3 Exam</div>
+    <div id="tipue_search_content">w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam<br /><h1>w15</h1>
+<p>題目一: 從 1 累加到 100"作為 anchor 的連結標題</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">print(sum(range(1, 101)))</pre>
+<p>1.當你寫 sum(range(1, 101)) 時，這其實是兩個東西在一起發揮作用。</p>
+<p>2.range(1, 101)：</p>
+<p>這個部分就像是告訴電腦：「嘿，我想要一個數字的清單，從 1 開始，一直到 100」。所以 range(1, 101) 會產生一個數字序列：1, 2, 3, … 一直到 100。</p>
+<p>3.sum()：</p>
+<p>接下來，sum() 是讓電腦將這些數字加起來。也就是說，sum(range(1, 101)) 就是讓電腦將從 1 到 100 的數字都加起來，然後算出總和。</p>
+<p>4.總和=2100×(1+100)=2100×101=5050</p>
+<p>題目二: 以"addto"作為連結標題</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto): # 使用公式計算總和 sum_upto = upto * (upto + 1) // 2 sum_init_minus_1 = (init - 1) * init // 2 return sum_upto - sum_init_minus_1 # 主程式 init = 1 upto = 100 # 呼叫 addto 函式 result = addto(init, upto) print(f"從{init}累加到{upto}={result}")</pre>
+<p>題目三: add_only_even 作為連結標題.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 計算從 init 到 upto 之間所有偶數的和
+    # 找到範圍內的第一個偶數
+    if init % 2 != 0:
+        init += 1  # 若起始數字為奇數，則跳過此數字，從下一個偶數開始
+     
+    # 找到範圍內的最後一個偶數
+    if upto % 2 != 0:
+        upto -= 1  # 若終止數字為奇數，則調整為上一個偶數
+     
+    # 偶數總和公式：等差數列求和
+    n = (upto - init) // 2 + 1  # 計算偶數的個數
+    sum_even = n * (init + upto) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+     
+    return sum_even
+ 
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}的偶數和={result}")</pre>
+<p>題目四: 以 add_avoid_8 作為連結標題.</p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">def addto(init, upto):
+    # 找到範圍內的第一個尾數為 8 的數字
+    if init % 10 &lt;= 8:
+        start = init + (8 - init % 10)
+    else:
+        start = init + (18 - init % 10)
+     
+    # 找到範圍內的最後一個尾數為 8 的數字
+    if upto % 10 &gt;= 8:
+        end = upto - (upto % 10 - 8)
+    else:
+        end = upto - (upto % 10 + 2)
+     
+    # 如果 start &gt; end，則沒有符合條件的數字
+    if start &gt; end:
+        return 0
+     
+    # 計算這些數字的總和
+    n = (end - start) // 10 + 1  # 這些數字的個數
+    total_sum = n * (start + end) // 2  # 等差數列求和公式：n * (首項 + 末項) / 2
+     
+    return total_sum
+ 
+# 主程式
+init = 1
+upto = 100
+# 呼叫 addto 函式
+result = addto(init, upto)
+print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
+<p></p><br />w13_hw << <a href='w13_hw.html'>Previous</a> <a href='HW 1 Exam.html'>Next</a> >> HW 1 Exam</div>
         
     <!-- footer -->
       <div class="container">

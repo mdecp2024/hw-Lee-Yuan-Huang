@@ -1,7 +1,7 @@
 <h1>First</h1>
 <h1>About</h1>
 <p>國立虎尾科技大學機械設計工程系</p>
-<p>National Formosa University</p>
+<p>National Formosa Universityz</p>
 <p>Department of Mechanical Design Engineering</p>
 <p>cp2024 計算機程式</p>
 <p>課程教材:</p>
@@ -212,7 +212,8 @@ for line in line_data[:-1]:
 <p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q7.py">07_list_slicing_use.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q8.py">08_for_range.ipynb</a></p>
 <p><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q9.py">09_for_loop_if_equals.ipynb</a> <span> </span><a href="https://mdecp2024.github.io/hw-ZJJ41323248/content/Brython.html?src=https://gist.githubusercontent.com/ZJJ41323248/a005f9f6f05070d54e4d8bb57bf24533/raw/bbeafe1ed8b2112bebaae6dd9bfe560795281cd4/Q10.py">10_for_search.ipynb</a></p>
 <p>語法:Python</p>
-<p>心得:</p><h2>w13_hw</h2>
+<p>心得:程式能繪製出不同的圖形，同時也能解答數學問題，透過學習程式語言，讓我靈活變更我要的圖形及問題。</p>
+<h2>w13_hw</h2>
 <p>一個格子</p>
 <pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">from browser import html
 from browser import document as doc
@@ -461,7 +462,8 @@ upto = 100
 # 呼叫 addto 函式
 result = addto(init, upto)
 print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
-<p></p><h2>HW 1 Exam</h2>
+<p></p>
+<h2>HW 1 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 Topic 1 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
 <h1>HW 2</h1>
@@ -472,11 +474,158 @@ print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
 <p>PART 2: Introduction to lists and if/else statements</p>
 <p>PART 3: Introduction to the for loop</p>
 <p>完成上述流程整理後, 請將 HW2 自評分數輸入 cp2024 自評表單中.</p>
-<h2>W7</h2>
 <h2>HW 2 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 2 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>HW 3</h1>
+<h3>w16_exam1</h3>
+<p>請在個人網頁標題為 "HW 2 Exam" 頁面之後, 加上一個第三階的頁面, 標題為 "w16_exam1".</p>
+<p>並在 "w16_exam1" 頁面中完成下列隨堂考試的要求 (20%):</p>
+<p>本項任務必須拍攝過程操作影片, 且<span>片頭要先切換到個人的課程網頁 "About" 頁面, 顯示操作者的學號與個人網頁連結</span>.</p>
+<p>題目: 請以<span>自己的學號最後四碼</span>作為繪圖的座標原點, (例如: 若學號最後四碼為 3932, 請將 (39, 32) 作為繪圖座標原點), 並以 pixel=2 的黑色直線分別利用 Brython 繪圖, 標示出向右為正的 X 軸, 以及向下為正的 Y 軸, 並且利用文字標示出原點座標 (例如: (39, 32)), 之後請自選最左側圖形的起始點座標, 直接在頁面畫出下列圖像, 繪圖程式除了必須直接列在頁面 html 檔案外, 也請存入自己的 Gist 區域, 並在所完成的圖像下方, 以自選標題的 anchor 連結至 Gist, 讓使用者點擊該連結後, 可以在各自的 Brython 頁面中繪出下列圖像 (<a href="https://www.ccplusmedia.com/wp-content/uploads/2019/10/creative-ad_landscape3.jpg">圖片來源</a>).</p>
+<p><a href="https://mdecp2024.github.io/hw-Lee-Yuan-Huang/content/Brython.html?src=https://gist.githubusercontent.com/Lee-Yuan-Huang/a5953bc9b7c9863139c03076aad4037e/raw/0ed540cdfdb5722d7fc092c65d338c2107577c3e/w163.py">圖形製作</a></p>
+<p></p>
+<!-- 導入 brython 程式庫 -->
+<p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload = function() {
+    brython({debug: 1, pythonpath: ['/static/', './../downloads/py/']});
+}
+</script>
+<!-- 這是畫布容器，給Brython添加Canvas元素 --></p>
+<div id="brython_div1"></div>
+<p>
+<script type="text/python">
+from browser import html
+from browser import document as doc
+
+# 建立 canvas 超文件物件
+canvas = html.CANVAS(width=600, height=600)
+brython_div = doc["brython_div1"]
+brython_div <= canvas  # 将 canvas 添加到容器中
+
+ctx = canvas.getContext("2d")
+ctx.lineWidth = 2
+
+# 設定線條顏色為橙色
+ctx.strokeStyle = 'orange'
+
+# 設定填充顏色為橘色
+ctx.fillStyle = 'orange'  # 這裡設定填充顏色為橘色
+
+# 繪製原來的多邊形，並填充顏色
+ctx.beginPath()
+ctx.moveTo(32, 49)  # 起點，改為 (32, 49)
+ctx.lineTo(61, 49)  # 第一條線
+ctx.lineTo(76, 73)  # 第二條線
+ctx.lineTo(61, 99)  # 第三條線
+ctx.lineTo(32, 99)  # 第四條線
+ctx.lineTo(17, 73)  # 第五條線
+ctx.lineTo(32, 49)  # 第六條線
+ctx.closePath()  # 關閉路徑，這樣我們的形狀就變成了封閉的多邊形
+
+# 填充顏色
+ctx.fill()  # 填充橘色
+
+# 繪製邊框 
+ctx.stroke()  # 保留邊框線條  
+
+# 繪製菱形 (綠色，並且變尖)
+ctx.beginPath()
+diamond_center_x = 120  # 菱形的中心X座標
+diamond_center_y = 73   # 菱形的中心Y座標
+diamond_vertical_size = 30  # 菱形的垂直邊長
+diamond_horizontal_size = 20  # 菱形的水平邊長 (變小，讓菱形更尖)
+
+# 計算菱形的四個頂點
+ctx.moveTo(diamond_center_x, diamond_center_y - diamond_vertical_size)  # 上頂點
+ctx.lineTo(diamond_center_x + diamond_horizontal_size, diamond_center_y)  # 右頂點
+ctx.lineTo(diamond_center_x, diamond_center_y + diamond_vertical_size)  # 下頂點
+ctx.lineTo(diamond_center_x - diamond_horizontal_size, diamond_center_y)  # 左頂點
+ctx.closePath()  # 關閉路徑
+
+# 填充菱形顏色
+ctx.fillStyle = 'teal'  # 設定填充顏色為綠色
+ctx.fill()  # 填充綠色
+
+# 繪製菱形邊框
+ctx.strokeStyle = 'teal'  # 設定邊框顏色為綠色
+ctx.stroke()  # 保留邊框線條
+
+# 繪製藍色正三角形
+ctx.beginPath()
+
+# 計算正三角形的三個頂點
+triangle_base_length = 30  # 正三角形的邊長
+triangle_height = (3 ** 0.5 / 2) * triangle_base_length  # 計算等邊三角形的高度
+
+# 右下方的位置
+triangle_x = diamond_center_x + diamond_horizontal_size + 5  # 菱形右側下方，稍微偏移
+triangle_y = diamond_center_y + diamond_vertical_size + 0  # 位置稍微向下
+
+# 設定三角形的三個頂點
+# 左邊底點
+ctx.moveTo(triangle_x - triangle_base_length / 2, triangle_y)
+# 右邊底點
+ctx.lineTo(triangle_x + triangle_base_length / 2, triangle_y)
+# 頂點
+ctx.lineTo(triangle_x, triangle_y - triangle_height)
+
+# 關閉路徑
+ctx.closePath()
+
+# 填充三角形顏色
+ctx.fillStyle = 'blue'  # 設定填充顏色為藍色
+ctx.fill()
+
+# 繪製三角形邊框
+ctx.strokeStyle = 'blue'  # 設定邊框顏色為藍色
+ctx.stroke()  # 保留邊框線條
+
+# 繪製桃紅色圓形
+ctx.beginPath()
+
+# 圓形的圓心位置
+circle_center_x = diamond_center_x + diamond_horizontal_size + 50  # 右邊偏移
+circle_center_y = diamond_center_y  # 與菱形的Y座標對齊
+
+# 圓形的半徑
+circle_radius = 30
+
+# 畫圓
+ctx.arc(circle_center_x, circle_center_y, circle_radius, 0, 2 * 3.1416)  # 0 到 2π 弧度
+
+# 填充顏色為桃紅色
+ctx.fillStyle = 'deeppink'  # 桃紅色
+ctx.fill()
+
+# 繪製圓形邊框
+ctx.strokeStyle = 'deeppink'  # 桃紅色邊框
+ctx.stroke()  # 保留邊框線條
+
+# 繪製正方形
+ctx.beginPath()
+
+# 計算正方形的左上角位置
+square_size = 50  # 正方形邊長為50
+square_x = circle_center_x + circle_radius + 10  # 放置於圓形的右邊
+square_y = circle_center_y - square_size / 2  # 正方形垂直居中於圓形
+
+# 繪製正方形
+ctx.rect(square_x, square_y, square_size, square_size)
+
+# 填充正方形顏色
+ctx.fillStyle = 'yellow'  # 正方形填充顏色為黃色
+ctx.fill()
+
+# 繪製正方形邊框
+ctx.strokeStyle = 'yellow'  # 正方形邊框顏色為
+</script>
+</p><h1>HW 3</h1>
 <h4>主題: Python 的數字、演算法與迴圈 (20%)</h4>
 <p style="padding-left: 30px;">Python 課程教材: <a href="https://www.learnpythonwithjupyter.com/">https://www.learnpythonwithjupyter.com/</a> - PART 4 and Part 5</p>
 <p>完成上述流程整理後, 請將 HW3 自評分數輸入 cp2024 自評表單中.</p>
@@ -492,13 +641,149 @@ print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
 <li>使用者可以透過瀏覽器, 以模擬場景所在電腦的 IP, 且埠號為 23020 觀看模擬場景</li>
 </ol>
 <p><img alt="" height="336" src="/images/螢幕擷取畫面 2024-10-16 121428.png" width="624"/></p>
-<h2>w7</h2>
 <p>n = 5 # 總共的行數<br/> <br/>for i in range(n): # 對於每一行</p>
 <p><br/><br/> # 印出空格<br/> print(' ' * (n - i - 1), end='') # 在每行前面印出空格<br/> # 印出星號<br/> print('*' * (2 * i + 1)) # 每行印出 2*i + 1 個星號</p>
 <h2>HW 3 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 3 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>HW 4</h1>
+<p>w16_exam2</p>
+<h3>w16_exam2</h3>
+<p>請在個人網頁標題為 "HW 3 Exam" 頁面之後, 加上一個第三階的頁面, 標題為 "w16_exam2".</p>
+<p>並在 "w16_exam2" 頁面中完成下列隨堂考試的要求 (20%):</p>
+<p>本項任務必須拍攝過程操作影片, 且<span>片頭要先切換到個人的課程網頁 "About" 頁面, 顯示操作者的學號與個人網頁連結</span>.</p>
+<p>題目一: 請以<span>自己的學號最後四碼</span>作為下列繪圖的左上方點座標, (例如: 若學號最後四碼為 3932, 請將 (39, 32) 作為繪圖左上方點座標), 並以紅色文字標示出該點座標 (例如: (39, 32)), 之後請利用<span> </span><span>pixel=2 的藍色直線</span>,<span> </span><span>自訂迷宮畫布大小</span>, 直接在頁面畫出下列圖像, 繪圖程式除了必須直接列在頁面 html 檔案外, 也請存入自己的 Gist 區域, 並在所完成的圖像下方, 以自選標題的 anchor 連結至 Gist, 讓使用者點擊該連結後, 可以在各自的 Brython 頁面中繪出下列圖像).</p>
+<p><a href="https://mdecp2024.github.io/hw-Lee-Yuan-Huang/content/Brython.html?src=https://gist.githubusercontent.com/Lee-Yuan-Huang/c9e4329f59e67735e18bf8e64d997140/raw/f279d57105738b9335be4ddc35ee92c719d8cefd/w162.py">迷宮圖</a></p>
+<p></p>
+<!-- 引入 brython 程式庫 -->
+<p>
+<script src="/static/brython.js"></script>
+<script src="/static/brython_stdlib.js"></script>
+</p>
+<!-- 啟動 Brython -->
+<p>
+<script>
+window.onload=function(){
+    brython({debug:1, pythonpath:['/static/','./../downloads/py/']});
+}
+</script>
+<!-- 調整 canvas 大小，以容納繪製的圖形 --> <canvas height="600" id="pyCanvas" width="600"></canvas>
+<script type="text/python">
+from browser import document
+from browser import html
+
+# 利用 html 建立 canvas 超文件物件
+canvas = document['pyCanvas']
+ctx = canvas.getContext("2d")
+
+# 設置畫筆屬性
+ctx.lineWidth = 2
+ctx.strokeStyle = 'blue'
+
+# 以下為原來的繪圖程式碼，保持不變
+ctx.beginPath()
+ctx.moveTo(32, 49)
+ctx.lineTo(232, 49)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(32, 49)
+ctx.lineTo(32, 547)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(332, 49)
+ctx.lineTo(532, 49)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(532, 49)
+ctx.lineTo(532, 547)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(532, 547)
+ctx.lineTo(332, 547)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(32, 547)
+ctx.lineTo(232, 547)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(232, 547)
+ctx.lineTo(232, 447)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(232, 447)
+ctx.lineTo(332, 447)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(432, 547)
+ctx.lineTo(432, 347)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(432, 347)
+ctx.lineTo(132, 347)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(132, 347)
+ctx.lineTo(132, 447)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(332, 347)
+ctx.lineTo(332, 247)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(32, 247)
+ctx.lineTo(232, 247)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(232, 247)
+ctx.lineTo(232, 147)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(132, 147)
+ctx.lineTo(432, 147)
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(432, 147)
+ctx.lineTo(432, 247)
+ctx.stroke()
+
+# 使用紅色字體標示起始點
+ctx.fillStyle = 'red'  # 設定文字顏色為紅色
+ctx.font = '16px Arial'  # 設定文字大小及字型
+ctx.fillText("起始點 (32, 49)", 60, 60)
+
+# 畫 X 軸和 Y 軸
+ctx.fillStyle = 'black'  
+ctx.font = '16px Arial'  
+ctx.fillText("X", 50, 15)  
+ctx.fillText("Y", 0, 50)
+
+# 畫 X 軸和 Y 軸
+ctx.strokeStyle = 'black'
+ctx.beginPath()
+ctx.moveTo(0, 0) 
+ctx.lineTo(50, 0)  
+ctx.stroke()
+
+ctx.beginPath()
+ctx.moveTo(0, 0) 
+ctx.lineTo(0, 50)  
+ctx.stroke()
+</script>
+</p><h1>HW 4</h1>
 <h4>主題: 利用 Python 控制機電模擬系統 (20%)</h4>
 <p style="padding-left: 30px;">利用 <a href="https://solvespace.com/">https://solvespace.com/</a> 建立機械系統零組件</p>
 <p style="padding-left: 30px;">利用 <a href="https://www.coppeliarobotics.com/">CoppeliaSim</a> 建立機電模擬系統</p>
@@ -506,11 +791,16 @@ print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
 <p style="padding-left: 30px;">範例:</p>
 <p style="padding-left: 60px;"><a href="/downloads/cd2023_pj3ag4_zmq_football_4.7.7z">cd2023_pj3ag4_zmq_football_4.7.7z</a></p>
 <p style="padding-left: 60px;"><a href="https://localhost:9446/downloads/cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z">cd2024_2b_g6_steel_ball_platform_nxopen_copsim.7z</a></p>
-<p>完成上述流程整理後, 請將 HW4 自評分數輸入 cp2024 自評表單中.</p>
-<h2>HW 4 Exam</h2>
+<p>完成上述流程整理後, 請將 HW4 自評分數輸入 cp2024 自評表單中.</p><h2>HW 4 Exam</h2>
 <p>每六人為一組進行協同程式練習</p>
 <p>透過 Jupyterlab 協同網頁, 輪流指定各組編寫 HW 4 相關的程式練習, 以及網頁內容 (localhost 與 Codespaces 環境)編輯.</p>
-<h1>Final Report</h1>
+<h3>w16_exam3</h3>
+<p>請在個人網頁標題為 "HW 4 Exam" 頁面之後, 加上一個第三階的頁面, 標題為 "w16_exam3".</p>
+<p>並在 "w16_exam3" 頁面中完成下列隨堂考試的要求 (20%):</p>
+<p>本項任務必須拍攝過程操作影片, 且<span>片頭要先切換到個人的課程網頁 "About" 頁面, 顯示操作者的學號與個人網頁連結</span>.</p>
+<p>題目一: 請以<span>自己的學號最後四碼</span>作為下列繪圖的左上方點座標, (例如: 若學號最後四碼為 3932, 請將 (39, 32) 作為繪圖左上方點座標), 並以紅色文字標示出該點座標 (例如: (39, 32)), 之後請利用<span> </span><span>pixel=2 的黑色直線</span>,<span> </span><span>自訂迷宮畫布大小</span>, 直接在頁面畫出下列圖像, 並且<span>利用紅色連續線段標示從上方入口, 走至下方出口的路線圖</span>.</p>
+<p>繪圖程式除了必須直接列在頁面 html 檔案外, 也請存入自己的 Gist 區域, 並在所完成的圖像下方, 以自選標題的 anchor 連結至 Gist, 讓使用者點擊該連結後, 可以在各自的 Brython 頁面中繪出下列圖像).</p>
+<p><a href="https://mdecp2024.github.io/hw-Lee-Yuan-Huang/content/Brython.html?src=https://gist.githubusercontent.com/Lee-Yuan-Huang/362ad6b37c87c3f4c2527e9d0bdf7719/raw/b0b38edee94a65349374658161d616ae237bc216/w161.py">迷宮路線</a></p><h1>Final Report</h1>
 <p>期末口頭與書面專題報告 (20%)</p>
 <p>期末口頭專題報告影片:</p>
 <p style="padding-left: 30px;">......</p>
@@ -520,8 +810,7 @@ print(f"從{init}累加到{upto}，只加尾數為8的數={result}")</pre>
 <p style="padding-left: 30px;">......</p>
 <p>期末報告自評成績:</p>
 <p style="padding-left: 30px;">完成上述流程後, 請將 Final Report 自評分數輸入 cp2024 自評表單中.</p>
-<p>           </p>
-<h1>Brython</h1>
+<p>           </p><h1>Brython</h1>
 <p>從 1 累加到 100:</p>
 <p><button id="add1to100">1 add to 100</button></p>
 <!-- 導入 brython 程式庫 -->
